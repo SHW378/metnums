@@ -1,17 +1,17 @@
 public class NewtonRaphson {
 
     // Función f(x) = x^2 - 2
-    public static double f(double x) {
+    private static double f(double x) {
         return x * x - 2;
     }
 
     // Derivada f'(x) = 2x
-    public static double df(double x) {
+    private static double df(double x) {
         return 2 * x;
     }
 
     // Método de Newton-Raphson
-    public static double newtonRaphson(double x0, double tol, int maxIter) {
+    private static double newtonRaphson(double x0, double tol, int maxIter) {
         double x = x0;
         int iter = 0;
 
