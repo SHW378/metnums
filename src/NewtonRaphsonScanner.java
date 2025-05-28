@@ -45,10 +45,10 @@ public class NewtonRaphsonScanner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nMétodo de Newton-Raphson para encontrar raíces de f(x) = x^2 - 2");
-        System.out.println("\nLa derivada es f'(x) = 2x");
+        System.out.println("Método de Newton-Raphson para encontrar raíces de f(x) = x^2 - 2");
+        System.out.println("La derivada es f'(x) = 2x");
 
-        System.out.print("Ingrese el valor inicial (x0): ");
+        System.out.print("\nIngrese el valor inicial (x0): ");
         double x0 = scanner.nextDouble();
 
         System.out.print("Ingrese la tolerancia (ej. 1e-6): ");
