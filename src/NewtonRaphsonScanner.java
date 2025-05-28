@@ -12,15 +12,17 @@ public class NewtonRaphsonScanner {
         return 2 * x;
     }
 
+    
     // Método de Newton-Raphson
     private static double newtonRaphson(double x0, double tol, int maxIter) {
+        // Validación de parámetros
         double x = x0;
         int iter = 0;
 
         while (Math.abs(f(x)) > tol && iter < maxIter) {
             double fx = f(x);
             double dfx = df(x);
-
+            
             if (dfx == 0) {
                 System.out.println("Error: la derivada es cero en x = " + x);
                 break;
@@ -42,6 +44,9 @@ public class NewtonRaphsonScanner {
     // Método principal
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("\nMétodo de Newton-Raphson para encontrar raíces de f(x) = x^2 - 2");
+        System.out.println("\nLa derivada es f'(x) = 2x");
 
         System.out.print("Ingrese el valor inicial (x0): ");
         double x0 = scanner.nextDouble();

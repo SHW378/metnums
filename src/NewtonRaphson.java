@@ -37,6 +37,9 @@ public class NewtonRaphson {
 
     // Método principal
     public static void main(String[] args) {
+        System.out.println("\nMétodo de Newton-Raphson para encontrar raíces de f(x) = x^2 - 2");
+        System.out.println("\nLa derivada es f'(x) = 2x");
+
         double x0 = 1.0; // Valor inicial
         double tol = 1e-6; // Tolerancia deseada
         int maxIter = 100; // Máximo de iteraciones
