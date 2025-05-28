@@ -41,8 +41,11 @@ public class NewtonRaphson {
         System.out.println("La derivada es f'(x) = 2x");
 
         double x0 = 1.0; // Valor inicial
+        System.out.print("Valor inicial (x0): " + x0 + "\n");
         double tol = 1e-6; // Tolerancia deseada
+        System.out.println("Tolerancia: " + tol);
         int maxIter = 100; // Máximo de iteraciones
+        System.out.println("Número máximo de iteraciones: " + maxIter);
 
         double raiz = newtonRaphson(x0, tol, maxIter);
         System.out.printf("\nRaíz aproximada: %.6f%n", raiz);
