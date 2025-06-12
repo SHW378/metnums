@@ -1,18 +1,18 @@
+
 import java.util.Scanner;
 
 public class NewtonRaphsonScanner {
 
     // Función f(x) = x^2 - 2
     private static double f(double x) {
-        return x * x - 2;
+        return x * x + x - 3;
     }
 
     // Derivada f'(x) = 2x
     private static double df(double x) {
-        return 2 * x;
+        return 2 * x + 1;
     }
 
-    
     // Método de Newton-Raphson
     private static double newtonRaphson(double x0, double tol, int maxIter) {
         // Validación de parámetros
@@ -22,7 +22,7 @@ public class NewtonRaphsonScanner {
         while (Math.abs(f(x)) > tol && iter < maxIter) {
             double fx = f(x);
             double dfx = df(x);
-            
+
             if (dfx == 0) {
                 System.out.println("Error: la derivada es cero en x = " + x);
                 break;
@@ -43,27 +43,25 @@ public class NewtonRaphsonScanner {
 
     // Método principal
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        System.out.println("Método de Newton-Raphson para encontrar raíces de f(x) = x^2 - 2");
-        System.out.println("La derivada es f'(x) = 2x");
+            System.out.println("Método de Newton-Raphson para encontrar raíces de f(x) = x^2 - 2");
+            System.out.println("La derivada es f'(x) = 2x");
 
-        System.out.print("\nIngrese el valor inicial (x0): ");
-        double x0 = scanner.nextDouble();
+            System.out.print("\nIngrese el valor inicial (x0): ");
+            double x0 = scanner.nextDouble();
 
-        System.out.print("Ingrese la tolerancia (ej. 1e-6): ");
-        double tol = scanner.nextDouble();
+            System.out.print("Ingrese la tolerancia (ej. 1e-6): ");
+            double tol = scanner.nextDouble();
 
-        System.out.print("Ingrese el número máximo de iteraciones: ");
-        int maxIter = scanner.nextInt();
+            System.out.print("Ingrese el número máximo de iteraciones: ");
+            int maxIter = scanner.nextInt();
 
-        double raiz = newtonRaphson(x0, tol, maxIter);
-        System.out.printf("Raíz aproximada: %.6f%n", raiz);
-        
-        scanner.close();
+            double raiz = newtonRaphson(x0, tol, maxIter);
+            System.out.printf("Raíz aproximada: %.6f%n", raiz);
+        }
     }
 }
-
 /*
 Inicio
 
